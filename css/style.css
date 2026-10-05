@@ -1,0 +1,33 @@
+/* Chaikhana - theme tokens */
+:root{--teal:#1f4e4a;--teal-d:#14322f;--saffron:#e0a526;--paper:#f7f9f8;--ink:#14221f;--gap:1.5rem}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+h1,h2,h3,.brand{font-family:'Fraunces',serif}
+/* Positioning: fixed nav + relative/absolute hero caption */
+.site-nav{background:var(--teal-d);position:fixed;top:0;left:0;right:0;z-index:100}
+.site-nav .nav-link{color:#e8efed}
+.site-nav .nav-link:hover,.site-nav .nav-link.active{color:var(--saffron)}
+.brand{color:var(--saffron)!important;font-size:1.5rem}
+main{padding-top:72px}
+.hero{position:relative;min-height:70vh;background:linear-gradient(120deg,var(--teal) 0%,var(--teal-d) 100%);color:#fff;display:flex;align-items:center}
+.hero h1{font-size:clamp(2.2rem,6vw,4rem)}
+.hero .badge-corner{position:absolute;right:1.5rem;bottom:1.5rem;background:var(--saffron);color:var(--ink);padding:.5rem 1rem;border-radius:.25rem;font-weight:600}
+.btn-saffron{background:var(--saffron);color:var(--ink);font-weight:600;border:0}
+.btn-saffron:hover{background:#c78f17;color:var(--ink)}
+section{padding:3.5rem 0}
+#intro p{max-width:65ch}
+/* Flexbox: feature row */
+.features{display:flex;flex-wrap:wrap;gap:var(--gap)}
+.feature{flex:1 1 220px;border-left:4px solid var(--saffron);padding-left:1rem}
+/* Grid: gallery */
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap)}
+.gallery-grid figure{margin:0}
+.gallery-grid img{width:100%;height:240px;object-fit:cover;border-radius:.25rem}
+.gallery-grid figcaption{font-size:.9rem;color:#4a5b57;margin-top:.4rem}
+.menu-table th{background:var(--teal);color:#fff}
+.price{font-weight:600;color:var(--teal)}
+.site-footer{background:var(--teal-d);color:#c9d6d3;padding:2rem 0}
+.site-footer a{color:var(--saffron)}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--saffron);outline-offset:2px}
+/* Media queries: tablet and mobile */
+@media (max-width:992px){.gallery-grid{grid-template-columns:repeat(2,1fr)}.hero{min-height:55vh}}
+@media (max-width:576px){.gallery-grid{grid-template-columns:1fr}.hero .badge-corner{position:static;display:inline-block;margin-top:1rem}section{padding:2rem 0}}
